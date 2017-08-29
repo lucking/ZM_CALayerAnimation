@@ -126,7 +126,7 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     isflage=!isflage;
     [super.navigationController setNavigationBarHidden:isflage animated:TRUE];
-    [super.navigationController setToolbarHidden:isflage animated:TRUE];
+//    [super.navigationController setToolbarHidden:isflage animated:TRUE];
 }
 
 
