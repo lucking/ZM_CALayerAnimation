@@ -26,7 +26,7 @@
 #import "CATransform3D_VC2.h"
 #import "Form_VC.h"
 #import "WaterWave_VC.h"
-
+#import "PopupMenuVC.h"
 
 @interface RootViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -75,7 +75,10 @@
                             @" CATransform3D_VC2",
                             @" CALayerAnimation_LibVC",
                             @" Form_VC",
-                            @" WaterWave_VC"
+                            @" WaterWave_VC",
+                            @" PopupMenu_VC",
+                            @" VC",
+                            @" VC"
                             ];
 	self.titleArray = titleArray;
 
@@ -96,7 +99,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UIViewController *pushVC;
     if (indexPath.row == 0) {       pushVC = [[FirstVController alloc]init];
-    }else if (indexPath.row == 1 ){ pushVC = [[SecondVController alloc]init];
+    }else if (indexPath.row == 1 ){ pushVC = [[PopupMenuVC alloc]init];//[[SecondVController alloc]init];
     }else if (indexPath.row == 2 ){  pushVC = [[Test_VC alloc]init];
     }else if (indexPath.row == 3 ){  pushVC = [[DrawRect_VC alloc]init];
         
@@ -111,6 +114,7 @@
     }else if (indexPath.row == 12 ){  pushVC = [[CALayerAnimation_LibVC alloc]init];
     }else if (indexPath.row == 13 ){  pushVC = [[Form_VC alloc]init];
     }else if (indexPath.row == 14 ){  pushVC = [[WaterWave_VC alloc]init];
+    }else if (indexPath.row == 15 ){  pushVC = [[PopupMenuVC alloc]init];
     }
     pushVC.title = self.titleArray[indexPath.row];
     pushVC.tabBarController.hidesBottomBarWhenPushed = YES;

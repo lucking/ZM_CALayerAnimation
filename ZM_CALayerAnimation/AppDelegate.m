@@ -33,41 +33,14 @@
     self.window.rootViewController= nav;
     
     
-    CGFloat priceValue = [@"72916000.22" doubleValue];
-    
-    NSLog(@"---> priceValue = %.3f ",priceValue/10000000);
-
-    NSLog(@"---> Value= %@",[NSString stringWithFormat:@"1", priceValue/10000000]);
-
-    
-     NSLog(@"---> priceValue = %@ ",[NSString stringWithFormat:@"%@%@",  [NSString stringWithFormat:@"1", priceValue/10000000],@"千万"]);
-    
-    NSLog(@"---> priceValue = %@ ",[NSString stringWithFormat:@"%@%@",  [NSString stringWithFormat:@"1", priceValue/10000000],@"千万"]);
-
-    
-    NSLog(@"---> priceValue = %@ ",[self setUnit:@"72915584.00" withSmall:@"1"]);
 
     
     return YES;
 }
 
-////单位1
-//- (NSString *)setUnit:(NSString *)value withSmall:(NSString *)small {
-//    
-//    NSString *strUnit;
-//    CGFloat priceValue = [value doubleValue];
-//    //以下为中国标准显示
-//    if (priceValue >10000&&priceValue<10000000) {
-//        strUnit = [NSString stringWithFormat:@"%.2f万",  priceValue/10000];
-//        
-//    }else if (priceValue >10000000&&priceValue<100000000){
-//        strUnit = [NSString stringWithFormat:@"%.3f千万", priceValue/10000000];
-//    }else{
-//        strUnit = [NSString stringWithFormat:@"%.1f亿", priceValue/100000000];
-//    }
-//    return strUnit;
-//}
-
+-(void)test {
+    NSLog(@"---> priceValue = %@ ",[self setUnit:@"72915584.00" withSmall:@"1"]);
+}
 //单位1
 - (NSString *)setUnit:(NSString *)value withSmall:(NSString *)small {
     

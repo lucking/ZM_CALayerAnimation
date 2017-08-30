@@ -87,7 +87,6 @@ static CGFloat yy1= 20, yy2= 200, yy3= 240;
     [_sscrollview.layer addSublayer:layer2];
     NSLog(@"-->layer1.zPosition= %f",layer1.zPosition); //1
     NSLog(@"-->layer2.zPosition= %f",layer2.zPosition); //0
-
     
     
     _imgView = [[UIImageView alloc]initWithFrame:CGRectMake(xx1, yy2, 200, 200)];
