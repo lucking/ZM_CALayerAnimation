@@ -88,12 +88,6 @@ static CGFloat RR = 40.f;  // 半径
     pathAnimation.toValue = [NSNumber numberWithFloat:0.9f]; 
     [lineLayer addAnimation:pathAnimation forKey:nil];
     
-    
-    
-    [UIView animateWithDuration:2 animations:^{
-        
-    }];
-    
 }
 // 画多边形
 - (void)drawRectangle {
