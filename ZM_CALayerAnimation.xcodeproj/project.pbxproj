@@ -84,6 +84,7 @@
 		68A704381F3419610037ECB1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A704371F3419610037ECB1 /* RootViewController.m */; };
 		68BB78FF1F1E549E00434B70 /* KlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BB78FE1F1E549E00434B70 /* KlineView.m */; };
 		68BB79021F1E5AC100434B70 /* ZM_KLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BB79011F1E5AC100434B70 /* ZM_KLineModel.m */; };
+		68CC264E1F5659AF002AE642 /* ZMPopupMenu.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 68CC264D1F5659AF002AE642 /* ZMPopupMenu.rtf */; };
 		68D06B401F131F4A004ED2B5 /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D06B3F1F131F4A004ED2B5 /* mask.png */; };
 		68D06B421F131F4E004ED2B5 /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D06B411F131F4E004ED2B5 /* mask.png */; };
 		68D06B451F131FFB004ED2B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D06B441F131FFB004ED2B5 /* QuartzCore.framework */; };
@@ -248,7 +249,6 @@
 		687BAEE51F1CFCC80001CF77 /* WaterWave_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterWave_VC.m; sourceTree = "<group>"; };
 		688973591F556B0F00F430DB /* ZMPopupMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMPopupMenuView.h; sourceTree = "<group>"; };
 		6889735A1F556B0F00F430DB /* ZMPopupMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMPopupMenuView.m; sourceTree = "<group>"; };
-		6889735C1F556E9500F430DB /* ZMPopupMenuHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMPopupMenuHeader.h; sourceTree = "<group>"; };
 		6889735D1F55713800F430DB /* UIView+PPFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PPFrame.h"; sourceTree = "<group>"; };
 		6889735E1F55713800F430DB /* UIView+PPFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PPFrame.m"; sourceTree = "<group>"; };
 		688973611F5581BF00F430DB /* PopupMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupMenuVC.h; sourceTree = "<group>"; };
@@ -266,6 +266,8 @@
 		68BB78FE1F1E549E00434B70 /* KlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlineView.m; sourceTree = "<group>"; };
 		68BB79001F1E5AC100434B70 /* ZM_KLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZM_KLineModel.h; sourceTree = "<group>"; };
 		68BB79011F1E5AC100434B70 /* ZM_KLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZM_KLineModel.m; sourceTree = "<group>"; };
+		68CC264C1F565939002AE642 /* PopupMenuHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupMenuHeader.h; sourceTree = "<group>"; };
+		68CC264D1F5659AF002AE642 /* ZMPopupMenu.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ZMPopupMenu.rtf; sourceTree = "<group>"; };
 		68D06B3F1F131F4A004ED2B5 /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask.png; sourceTree = "<group>"; };
 		68D06B411F131F4E004ED2B5 /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask.png; sourceTree = "<group>"; };
 		68D06B441F131FFB004ED2B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -642,13 +644,14 @@
 		688973581F556A9500F430DB /* ZMPopupMenu */ = {
 			isa = PBXGroup;
 			children = (
-				6889735C1F556E9500F430DB /* ZMPopupMenuHeader.h */,
+				68CC264C1F565939002AE642 /* PopupMenuHeader.h */,
 				688973591F556B0F00F430DB /* ZMPopupMenuView.h */,
 				6889735A1F556B0F00F430DB /* ZMPopupMenuView.m */,
 				688973641F559C9400F430DB /* PopupMenuCell.h */,
 				688973651F559C9400F430DB /* PopupMenuCell.m */,
 				6889735D1F55713800F430DB /* UIView+PPFrame.h */,
 				6889735E1F55713800F430DB /* UIView+PPFrame.m */,
+				68CC264D1F5659AF002AE642 /* ZMPopupMenu.rtf */,
 			);
 			path = ZMPopupMenu;
 			sourceTree = "<group>";
@@ -837,6 +840,7 @@
 				68A704361F3410BE0037ECB1 /* CustomView.xib in Resources */,
 				686A2DF31F1202FC002D09C8 /* test.png in Resources */,
 				6827CE041F0F5B91005B5EC8 /* cc.png in Resources */,
+				68CC264E1F5659AF002AE642 /* ZMPopupMenu.rtf in Resources */,
 				685ACB3B1F0DE76400C6BF2C /* 樱花瓣1.png in Resources */,
 				685ACB3E1F0DE76400C6BF2C /* 樱花树2.png in Resources */,
 				685ACB1A1F0DE4F100C6BF2C /* 2.jpg in Resources */,

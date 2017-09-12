@@ -1,0 +1,162 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf760
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset134 PingFangSC-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green116\blue0;\red170\green13\blue145;
+\red46\green13\blue110;\red196\green26\blue22;\red63\green110\blue116;\red92\green38\blue153;\red28\green0\blue207;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c0\c0;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c66500\c5200\c56900;
+\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c11000\c0\c81000;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+ZMPopupMenu\
+\
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0     \cf3 //UIRectCorner corners = UIRectCornerTopLeft | UIRectCornerBottomLeft;  //
+\f2 \'b2\'bb\'cd\'ac\'b5\'c4\'bd\'c7\'b6\'c8
+\f1 \cf2 \
+\
+\cf3 // 
+\f2 \'b2\'bc\'be\'d6
+\f1 UI\cf2 \
+- (\cf4 void\cf2 )layoutSubviews \{\
+    [\cf4 super\cf2  \cf5 layoutSubviews\cf2 ]; \cf3 //NSLog(@"--> layoutSubviews
+\f2 \'a3\'ba\'b2\'bc\'be\'d6
+\f1 UI_
+\f2 \'bc\'d3\'d4\'d8\'ca\'fd\'be\'dd
+\f1 ");\cf2 \
+\}\
+\cf3 // 
+\f2 \'b1\'ea\'bc\'c7\'d6\'d8\'d0\'c2\'d0\'e8\'d2\'aa\'b2\'bc\'be\'d6
+\f1 \cf2 \
+- (\cf4 void\cf2 )setNeedsLayout \{\
+    [\cf4 super\cf2  \cf5 setNeedsLayout\cf2 ]; \cf5 NSLog\cf2 (\cf6 @"--> setNeedsLayout_
+\f2 \cf6 \'b1\'ea\'bc\'c7\'d6\'d8\'d0\'c2\'d0\'e8\'d2\'aa\'b2\'bc\'be\'d6
+\f1 \cf6 "\cf2 );\
+\}\
+\cf3 // 
+\f2 \'c1\'a2\'bc\'b4\'d6\'d8\'d0\'c2\'b2\'bc\'be\'d6
+\f1 \cf2 \
+- (\cf4 void\cf2 )layoutIfNeeded \{\
+    [\cf4 super\cf2  \cf5 layoutIfNeeded\cf2 ]; \cf5 NSLog\cf2 (\cf6 @"--> layoutIfNeeded_
+\f2 \cf6 \'c1\'a2\'bc\'b4\'d6\'d8\'d0\'c2\'b2\'bc\'be\'d6
+\f1 \cf6 "\cf2 );\
+\}
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \CocoaLigature0 // 
+\f2 \'bb\'ad\'cf\'df\'a3\'ba
+\f1 UIBezierPath\cf2 \
+- (\cf4 void\cf2 )drawLine \{\
+    \
+    \cf3 //
+\f2 \'c8\'fd\'bd\'c7\'cd\'b9\'c6\'f0
+\f1 \cf2 \
+    \cf5 NSLog\cf2 (\cf6 @"---> self.centerX = %f\\n "\cf2 ,\cf4 self\cf2 .\cf7 centerX\cf2 );\
+    \cf8 UIBezierPath\cf2  *linePath = [\cf8 UIBezierPath\cf2  \cf5 bezierPath\cf2 ];\
+    [linePath \cf5 moveToPoint\cf2 :\cf5 CGPointMake\cf2 (\cf4 self\cf2 .\cf7 width\cf2 /\cf9 2\cf2 -\cf9 10\cf2 , \cf9 0\cf2 )];     \cf3 // 
+\f2 \'c6\'f0\'b5\'e3
+\f1 \cf2 \
+    [linePath \cf5 addLineToPoint\cf2 :\cf5 CGPointMake\cf2 (\cf4 self\cf2 .\cf7 width\cf2 /\cf9 2\cf2 , -\cf9 10\cf2 )];   \cf3 // 
+\f2 \'b5\'da
+\f1 2
+\f2 \'b8\'f6\'b5\'e3
+\f1 \cf2 \
+    [linePath \cf5 addLineToPoint\cf2 :\cf5 CGPointMake\cf2 (\cf4 self\cf2 .\cf7 width\cf2 /\cf9 2\cf2 +\cf9 10\cf2 , \cf9 0\cf2 )];  \cf3 // 
+\f2 \'b5\'da
+\f1 3
+\f2 \'b8\'f6\'b5\'e3
+\f1 \cf2 \
+    \cf3 //
+\f2 \'cd\'ac\'c9\'cf\'a3\'a8\'ca\'b9\'d3\'c3\'cd\'bc\'b2\'e3\'cc\'ee\'b3\'e4\'a3\'a9
+\f1 \cf2 \
+    \cf8 CAShapeLayer\cf2  *lineLayer = [\cf8 CAShapeLayer\cf2  \cf5 layer\cf2 ];\
+    lineLayer.\cf8 path\cf2  = linePath.\cf8 CGPath\cf2 ;\
+    lineLayer.\cf8 lineWidth\cf2  = \cf9 1\cf2 ;\
+    lineLayer.\cf8 strokeColor\cf2  = [\cf8 UIColor\cf2  \cf5 magentaColor\cf2 ].\cf8 CGColor\cf2 ;\
+    lineLayer.\cf8 fillColor\cf2  = [\cf8 UIColor\cf2  \cf5 yellowColor\cf2 ].\cf8 CGColor\cf2 ;\
+    [\cf4 self\cf2 .\cf8 layer\cf2  \cf5 addSublayer\cf2 :lineLayer];\
+    \cf3 //
+\f2 \'b8\'b2\'b8\'c7\'c8\'fd\'bd\'c7\'bf\'d5\'d0\'c4\'b4\'a6
+\f1 \cf2 \
+    \cf8 UIBezierPath\cf2  *linePath2 = [\cf8 UIBezierPath\cf2  \cf5 bezierPath\cf2 ];\
+    [linePath2 \cf5 moveToPoint\cf2 :\cf5 CGPointMake\cf2 (\cf4 self\cf2 .\cf7 width\cf2 /\cf9 2\cf2 -\cf9 10\cf2 +\cf9 1\cf2 , \cf9 0\cf2 )];     \cf3 // 
+\f2 \'c6\'f0\'b5\'e3
+\f1 \cf2 \
+    [linePath2 \cf5 addLineToPoint\cf2 :\cf5 CGPointMake\cf2 (\cf4 self\cf2 .\cf7 width\cf2 /\cf9 2\cf2 +\cf9 10\cf2 -\cf9 1\cf2 , \cf9 0\cf2 )];  \cf3 // 
+\f2 \'b5\'da
+\f1 2
+\f2 \'b8\'f6\'b5\'e3
+\f1 \cf2 \
+    \cf8 CAShapeLayer\cf2  *lineLayer2 = [\cf8 CAShapeLayer\cf2  \cf5 layer\cf2 ];\
+    lineLayer2.\cf8 path\cf2  = linePath2.\cf8 CGPath\cf2 ;\
+    lineLayer2.\cf8 lineWidth\cf2  = \cf9 1\cf2 ;\
+    lineLayer2.\cf8 strokeColor\cf2  = [\cf8 UIColor\cf2  \cf5 yellowColor\cf2 ].\cf8 CGColor\cf2 ;\
+    lineLayer2.\cf8 fillColor\cf2  = [\cf8 UIColor\cf2  \cf5 yellowColor\cf2 ].\cf8 CGColor\cf2 ;\
+    [\cf4 self\cf2 .\cf8 layer\cf2  \cf5 addSublayer\cf2 :lineLayer2];\
+\}\cf3  \
+\cf2 \
+\cf3 //    //
+\f2 \'c8\'fd\'bd\'c7\'cd\'b9\'c6\'f0
+\f1 \cf2 \
+\cf3 //    NSLog(@"---> self.centerX = %f\\n ",self.centerX);\cf2 \
+\cf3 //    UIBezierPath *linePath = [UIBezierPath bezierPath];\cf2 \
+\cf3 //    [linePath moveToPoint:point1];      // 
+\f2 \'c6\'f0\'b5\'e3
+\f1 \cf2 \
+\cf3 //    [linePath addLineToPoint:point2];   // 
+\f2 \'b5\'da
+\f1 2
+\f2 \'b8\'f6\'b5\'e3
+\f1 \cf2 \
+\cf3 //    [linePath addLineToPoint:point3];   // 
+\f2 \'b5\'da
+\f1 3
+\f2 \'b8\'f6\'b5\'e3
+\f1 \cf2 \
+\cf3 //    //
+\f2 \'cd\'ac\'c9\'cf\'a3\'a8\'ca\'b9\'d3\'c3\'cd\'bc\'b2\'e3\'cc\'ee\'b3\'e4\'a3\'a9
+\f1 \cf2 \
+\cf3 //    CAShapeLayer *lineLayer = [CAShapeLayer layer];\cf2 \
+\cf3 //    lineLayer.path = linePath.CGPath;\cf2 \
+\cf3 //    lineLayer.lineWidth = 1;\cf2 \
+\cf3 //    lineLayer.strokeColor = [UIColor magentaColor].CGColor;\cf2 \
+\cf3 //    lineLayer.fillColor = [UIColor yellowColor].CGColor;\cf2 \
+\cf3 //    [self.layer addSublayer:lineLayer];\cf2 \
+\cf3 //    //
+\f2 \'b8\'b2\'b8\'c7\'c8\'fd\'bd\'c7\'bf\'d5\'d0\'c4\'b4\'a6
+\f1 \cf2 \
+\cf3 //    UIBezierPath *linePath2 = [UIBezierPath bezierPath];\cf2 \
+\cf3 //    [linePath2 moveToPoint:pointA];     // 
+\f2 \'c6\'f0\'b5\'e3
+\f1 \cf2 \
+\cf3 //    [linePath2 addLineToPoint:pointB];  // 
+\f2 \'b5\'da
+\f1 2
+\f2 \'b8\'f6\'b5\'e3
+\f1 \cf2 \
+\cf3 //    CAShapeLayer *lineLayer2 = [CAShapeLayer layer];\cf2 \
+\cf3 //    lineLayer2.path = linePath2.CGPath;\cf2 \
+\cf3 //    lineLayer2.lineWidth = 1;\cf2 \
+\cf3 //    lineLayer2.strokeColor = [UIColor yellowColor].CGColor;\cf2 \
+\cf3 //    lineLayer2.fillColor = [UIColor yellowColor].CGColor;\cf2 \
+\cf3 //    [self.layer addSublayer:lineLayer2];\cf2 \
+\
+\cf3 //    CGPoint point1 = CGPointMake(0, 0);\cf2 \
+\cf3 //    CGPoint point2 = CGPointMake(0, 0);\cf2 \
+\cf3 //    CGPoint point3 = CGPointMake(0, 0);\cf2 \
+\cf3 //    CGPoint pointA = CGPointMake(0, 0);\cf2 \
+\cf3 //    CGPoint pointB = CGPointMake(0, 0);\cf2 \
+\
+\
+\
+\
+\
+}

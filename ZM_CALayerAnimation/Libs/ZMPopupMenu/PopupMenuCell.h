@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface PopupMenuCell : UITableViewCell
+@property (nonatomic, strong) UILabel *titleLab;
+@property (nonatomic, strong) UIImageView *imgView;
+@property (nonatomic) CGFloat cellWidth;
+@property (nonatomic) CGFloat cellHeight;
 
+//配置数据
+- (void)setTitleArray:(NSArray *)titleArray imageArray:(NSArray *)imageArray cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 @end

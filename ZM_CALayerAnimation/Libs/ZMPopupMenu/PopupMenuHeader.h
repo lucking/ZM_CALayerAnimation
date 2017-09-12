@@ -1,15 +1,13 @@
 //
-//  ZMPopupMenuHeader.h
+//  PopupMenuHeader.h
 //  ZM_CALayerAnimation
 //
-//  Created by ZM on 2017/8/29.
+//  Created by ZM on 2017/8/30.
 //  Copyright © 2017年 ZM. All rights reserved.
 //
 
-#ifndef ZMPopupMenuHeader_h
-#define ZMPopupMenuHeader_h
-
-
+#ifndef PopupMenuHeader_h
+#define PopupMenuHeader_h
 
 //获取当前系统的版本号
 //#define FLOATVALUE [[[UIDevice currentDevice] systemVersion] floatValue]
@@ -265,5 +263,4 @@
 
 
 
-
-#endif /* ZMPopupMenuHeader_h */
+#endif /* PopupMenuHeader_h */

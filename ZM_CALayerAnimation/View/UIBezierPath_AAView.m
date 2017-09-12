@@ -77,6 +77,23 @@ static CGFloat RR = 40.f;  // 半径
     lineLayer.strokeColor = _strokeColor.CGColor;
     lineLayer.fillColor = _fillColor.CGColor;
     [self.layer addSublayer:lineLayer];
+    
+    
+    lineLayer.speed       = 0.6;    // 绘制的速度 （动画时间的百分比：0.0~1.0 * duration）
+    lineLayer.lineWidth   = 2.0f;   // 线条宽度
+    // 给这个layer添加动画效果
+    CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    pathAnimation.duration = 1.0;
+    pathAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
+    pathAnimation.toValue = [NSNumber numberWithFloat:0.9f]; 
+    [lineLayer addAnimation:pathAnimation forKey:nil];
+    
+    
+    
+    [UIView animateWithDuration:2 animations:^{
+        
+    }];
+    
 }
 // 画多边形
 - (void)drawRectangle {
