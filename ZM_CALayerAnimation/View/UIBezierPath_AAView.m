@@ -76,11 +76,10 @@ static CGFloat RR = 40.f;  // 半径
     lineLayer.lineWidth = 1;
     lineLayer.strokeColor = _strokeColor.CGColor;
     lineLayer.fillColor = _fillColor.CGColor;
-    [self.layer addSublayer:lineLayer];
-    
-    
     lineLayer.speed       = 0.6;    // 绘制的速度 （动画时间的百分比：0.0~1.0 * duration）
     lineLayer.lineWidth   = 2.0f;   // 线条宽度
+    [self.layer addSublayer:lineLayer];
+    
     // 给这个layer添加动画效果
     CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     pathAnimation.duration = 1.0;
@@ -124,13 +123,15 @@ static CGFloat RR = 40.f;  // 半径
     startAngle:(CGFloat)startAngle
     endAngle:(CGFloat)endAngle
     clockwise:(BOOL)clockwise;
+ 
+ // 添加圆到path
+ // radius= R：半径
+ // M_PI= 180度
+ 
   */
 // 画圆_1
 - (void)drawCircle1
 {
-    // 添加圆到path
-    // radius= R：半径
-    // M_PI= 180度
     UIBezierPath *circlePath = [UIBezierPath bezierPath];
     [circlePath addArcWithCenter:CGPointMake(60, 130)
                           radius: RR
@@ -143,13 +144,12 @@ static CGFloat RR = 40.f;  // 半径
     [circlePath setLineWidth:2];//边宽
     [circlePath stroke];        //启动 边框设置
     [circlePath fill];          //启动 内部填充
+    
+    
 }
 // 画圆_2
 - (void)drawCircle2
 {
-    // 添加圆到path
-    // radius= R：半径
-    // M_PI= 180度
     UIBezierPath *circlePath = [UIBezierPath bezierPath];
     [circlePath addArcWithCenter:CGPointMake(160,130)
                           radius: RR
@@ -166,9 +166,6 @@ static CGFloat RR = 40.f;  // 半径
 // 画圆_3
 - (void)drawCircle3
 {
-    // 添加圆到path
-    // radius= R：半径
-    // M_PI= 180度
     UIBezierPath *circlePath = [UIBezierPath bezierPath];
     [circlePath addArcWithCenter:CGPointMake(260,130)
                           radius: RR
@@ -183,13 +180,9 @@ static CGFloat RR = 40.f;  // 半径
     [circlePath fill];          //启动 内部填充
 }
 
-
 // 画圆_4
 - (void)drawCircle4
 {
-    // 添加圆到path
-    // radius= R：半径
-    // M_PI= 180度
     UIBezierPath *circlePath = [UIBezierPath bezierPath];
     [circlePath addArcWithCenter:CGPointMake(60,260)
                           radius:(RR+10.f)
@@ -206,9 +199,6 @@ static CGFloat RR = 40.f;  // 半径
 // 画圆_5
 - (void)drawCircle5
 {
-    // 添加圆到path
-    // radius= R：半径
-    // M_PI= 180度
     UIBezierPath *circlePath = [UIBezierPath bezierPath];
     [circlePath addArcWithCenter:CGPointMake(200,260)
                           radius:(RR+10.f)
@@ -221,6 +211,7 @@ static CGFloat RR = 40.f;  // 半径
     [circlePath setLineWidth:2];//边宽
     [circlePath stroke];        //启动 边框设置
     [circlePath fill];          //启动 内部填充
+
 }
 
 
@@ -254,15 +245,32 @@ static CGFloat WWHH = 100;  // 的高度
     
     [Green_00CD66 set]; //设置线条颜色
     UIBezierPath* aPath = [UIBezierPath bezierPath];
-    aPath.lineWidth = 5.0;
-    aPath.lineCapStyle = kCGLineCapRound; //线条拐角
+    aPath.lineWidth = 1.0;
+    aPath.lineCapStyle  = kCGLineCapRound; //线条拐角
     aPath.lineJoinStyle = kCGLineCapRound; //终点处理
     
-    [aPath moveToPoint:CGPointMake(120, 350)];
+    [aPath moveToPoint:CGPointMake(120, 280)];
     [aPath addCurveToPoint:CGPointMake(300, 350)
              controlPoint1:CGPointMake(210, 300)
              controlPoint2:CGPointMake(210, 400)];
+//    [aPath addLineToPoint:CGPointMake(230, 450)];
     [aPath stroke];
+
+    //（使用图层填充）
+    CAShapeLayer *lineLayer = [CAShapeLayer layer];
+    lineLayer.path = aPath.CGPath;
+    lineLayer.lineWidth = 1;
+    lineLayer.strokeColor = _strokeColor.CGColor;
+    lineLayer.fillColor = _fillColor.CGColor;
+    lineLayer.speed       = 0.6;    // 绘制的速度 （动画时间的百分比：0.0~1.0 * duration）
+    lineLayer.lineWidth   = 2.0f;   // 线条宽度
+    [self.layer addSublayer:lineLayer];
+    // 给这个layer添加动画效果
+    CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    pathAnimation.duration  = 1.0;
+    pathAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
+    pathAnimation.toValue   = [NSNumber numberWithFloat:1.0f]; 
+    [lineLayer addAnimation:pathAnimation forKey:nil];
 
 }
 

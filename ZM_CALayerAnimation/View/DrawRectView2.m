@@ -62,7 +62,6 @@
     
     
     
-    
     //创建画板
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(ctx, 5.0); //线条宽度

@@ -74,8 +74,7 @@ static CGFloat faceHeight = 140;  //
     
     //设置各个圆角：封装方法
     [self setCornersOfView:_myLab1 byCorners:UIRectCornerTopLeft|UIRectCornerBottomLeft
-               cornerRadii:CGSizeMake(10,10)
-                 fillColor:Purple_CD69C9 lineWidth:10 lineColor:Clear_COLOR];
+               cornerRadii:CGSizeMake(10,10) fillColor:Purple_CD69C9 lineWidth:10 lineColor:Clear_COLOR];
     // 设置段落样式
     [self seteLineSpace:0 paragraphSpace:0 characterSpace:[NSNumber numberWithFloat:5] alignment:NSTextAlignmentCenter headIndent:5 withUILabel:_myLab1];
     //2.阴影图层
@@ -93,7 +92,10 @@ static CGFloat faceHeight = 140;  //
                cornerRadii:CGSizeMake(20,20) fillColor:Green_9BCD9B lineWidth:2 lineColor:Red_EEAEEE];
     
     [self setCornersOfView:_myView4 byCorners:UIRectCornerBottomLeft|UIRectCornerBottomRight
-               cornerRadii:CGSizeMake(20,20) fillColor:Green_9BCD9B lineWidth:2 lineColor:Red_EEAEEE];
+               cornerRadii:CGSizeMake(20,20) 
+                 fillColor:Green_9BCD9B 
+                 lineWidth:2 
+                 lineColor:Red_EEAEEE];
     
 }
 

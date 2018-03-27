@@ -16,7 +16,6 @@
     
     UIView *view1;
     [self flipView:view1 Rect:CGRectMake(0, 0, SSWIDTH, SSHEIGHT) forView:self timeInterval:0.1];
-
     
     
     UILabel *_myLab1;

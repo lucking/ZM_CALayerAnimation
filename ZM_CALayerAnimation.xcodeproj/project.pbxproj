@@ -47,7 +47,6 @@
 		685ACAF41F0DE28C00C6BF2C /* GraphicsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 685ACAEE1F0DE28C00C6BF2C /* GraphicsView.m */; };
 		685ACAF51F0DE28C00C6BF2C /* RectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 685ACAF01F0DE28C00C6BF2C /* RectView.m */; };
 		685ACAFC1F0DE2AF00C6BF2C /* ScaleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 685ACAFB1F0DE2AF00C6BF2C /* ScaleCell.m */; };
-		685ACB041F0DE35E00C6BF2C /* XSChartVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 685ACB031F0DE35E00C6BF2C /* XSChartVController.m */; };
 		685ACB181F0DE4F100C6BF2C /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 685ACB0C1F0DE4F100C6BF2C /* 1.jpg */; };
 		685ACB1A1F0DE4F100C6BF2C /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 685ACB0E1F0DE4F100C6BF2C /* 2.jpg */; };
 		685ACB201F0DE4F100C6BF2C /* BANK_CCB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 685ACB141F0DE4F100C6BF2C /* BANK_CCB@2x.png */; };
@@ -66,6 +65,7 @@
 		685ACB511F0E0AE300C6BF2C /* CALayer_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 685ACB501F0E0AE300C6BF2C /* CALayer_VC.m */; };
 		685ACB541F0E107800C6BF2C /* UIBezierPath_AAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 685ACB531F0E107800C6BF2C /* UIBezierPath_AAView.m */; };
 		685ACB571F0E185F00C6BF2C /* CGContextRef_aaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 685ACB561F0E185F00C6BF2C /* CGContextRef_aaView.m */; };
+		685C37391F89192500AF30EA /* DrawRectView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 685C37381F89192500AF30EA /* DrawRectView1.m */; };
 		686A2DF31F1202FC002D09C8 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 686A2DF21F1202FC002D09C8 /* test.png */; };
 		68788E441F14735D0022581E /* CALayer_CAEmitterLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 68788E431F14735D0022581E /* CALayer_CAEmitterLayer.m */; };
 		68788E4A1F1479D00022581E /* CABasicAnimation_VC1.m in Sources */ = {isa = PBXBuildFile; fileRef = 68788E491F1479D00022581E /* CABasicAnimation_VC1.m */; };
@@ -82,10 +82,7 @@
 		68A704341F3410AC0037ECB1 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A704331F3410AC0037ECB1 /* CustomView.m */; };
 		68A704361F3410BE0037ECB1 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A704351F3410BE0037ECB1 /* CustomView.xib */; };
 		68A704381F3419610037ECB1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A704371F3419610037ECB1 /* RootViewController.m */; };
-		68BB78FF1F1E549E00434B70 /* KlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BB78FE1F1E549E00434B70 /* KlineView.m */; };
-		68BB79021F1E5AC100434B70 /* ZM_KLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BB79011F1E5AC100434B70 /* ZM_KLineModel.m */; };
 		68CC264E1F5659AF002AE642 /* ZMPopupMenu.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 68CC264D1F5659AF002AE642 /* ZMPopupMenu.rtf */; };
-		68D06B401F131F4A004ED2B5 /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D06B3F1F131F4A004ED2B5 /* mask.png */; };
 		68D06B421F131F4E004ED2B5 /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D06B411F131F4E004ED2B5 /* mask.png */; };
 		68D06B451F131FFB004ED2B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D06B441F131FFB004ED2B5 /* QuartzCore.framework */; };
 		68D06B471F132006004ED2B5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D06B461F132006004ED2B5 /* CoreText.framework */; };
@@ -95,6 +92,7 @@
 		68D5236C1F1CBF58008A4F06 /* UIView+BorderPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D5236B1F1CBF58008A4F06 /* UIView+BorderPath.m */; };
 		68D5236F1F1CBFF6008A4F06 /* Form_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D5236E1F1CBFF6008A4F06 /* Form_VC.m */; };
 		68D523721F1CC064008A4F06 /* FormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D523711F1CC064008A4F06 /* FormView.m */; };
+		68EF75072069DDC600265BDE /* XSChartVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EF75062069DDC600265BDE /* XSChartVController.m */; };
 		68F6E72C1F1D9E3000202545 /* TextAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F6E72B1F1D9E3000202545 /* TextAnimationVC.m */; };
 		68F6EBBD1F1C4CAF0076E1D0 /* scene1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 68F6EBBC1F1C4CAF0076E1D0 /* scene1_1.png */; };
 		68F6EBC01F1C4EAD0076E1D0 /* DrawRect_imgBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F6EBBF1F1C4EAD0076E1D0 /* DrawRect_imgBgView.m */; };
@@ -207,8 +205,6 @@
 		685ACAF01F0DE28C00C6BF2C /* RectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectView.m; sourceTree = "<group>"; };
 		685ACAFA1F0DE2AF00C6BF2C /* ScaleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleCell.h; sourceTree = "<group>"; };
 		685ACAFB1F0DE2AF00C6BF2C /* ScaleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleCell.m; sourceTree = "<group>"; };
-		685ACB021F0DE35E00C6BF2C /* XSChartVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSChartVController.h; sourceTree = "<group>"; };
-		685ACB031F0DE35E00C6BF2C /* XSChartVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSChartVController.m; sourceTree = "<group>"; };
 		685ACB0C1F0DE4F100C6BF2C /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		685ACB0E1F0DE4F100C6BF2C /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		685ACB141F0DE4F100C6BF2C /* BANK_CCB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BANK_CCB@2x.png"; sourceTree = "<group>"; };
@@ -234,6 +230,8 @@
 		685ACB531F0E107800C6BF2C /* UIBezierPath_AAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBezierPath_AAView.m; sourceTree = "<group>"; };
 		685ACB551F0E185F00C6BF2C /* CGContextRef_aaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGContextRef_aaView.h; sourceTree = "<group>"; };
 		685ACB561F0E185F00C6BF2C /* CGContextRef_aaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGContextRef_aaView.m; sourceTree = "<group>"; };
+		685C37371F89192500AF30EA /* DrawRectView1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawRectView1.h; sourceTree = "<group>"; };
+		685C37381F89192500AF30EA /* DrawRectView1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawRectView1.m; sourceTree = "<group>"; };
 		686A2DF21F1202FC002D09C8 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		68788E421F14735D0022581E /* CALayer_CAEmitterLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayer_CAEmitterLayer.h; sourceTree = "<group>"; };
 		68788E431F14735D0022581E /* CALayer_CAEmitterLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALayer_CAEmitterLayer.m; sourceTree = "<group>"; };
@@ -262,13 +260,8 @@
 		68A704331F3410AC0037ECB1 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		68A704351F3410BE0037ECB1 /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		68A704371F3419610037ECB1 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		68BB78FD1F1E549E00434B70 /* KlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlineView.h; sourceTree = "<group>"; };
-		68BB78FE1F1E549E00434B70 /* KlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlineView.m; sourceTree = "<group>"; };
-		68BB79001F1E5AC100434B70 /* ZM_KLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZM_KLineModel.h; sourceTree = "<group>"; };
-		68BB79011F1E5AC100434B70 /* ZM_KLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZM_KLineModel.m; sourceTree = "<group>"; };
 		68CC264C1F565939002AE642 /* PopupMenuHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupMenuHeader.h; sourceTree = "<group>"; };
 		68CC264D1F5659AF002AE642 /* ZMPopupMenu.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ZMPopupMenu.rtf; sourceTree = "<group>"; };
-		68D06B3F1F131F4A004ED2B5 /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask.png; sourceTree = "<group>"; };
 		68D06B411F131F4E004ED2B5 /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask.png; sourceTree = "<group>"; };
 		68D06B441F131FFB004ED2B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		68D06B461F132006004ED2B5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -282,6 +275,8 @@
 		68D5236E1F1CBFF6008A4F06 /* Form_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Form_VC.m; sourceTree = "<group>"; };
 		68D523701F1CC064008A4F06 /* FormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormView.h; sourceTree = "<group>"; };
 		68D523711F1CC064008A4F06 /* FormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormView.m; sourceTree = "<group>"; };
+		68EF75052069DDC600265BDE /* XSChartVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSChartVController.h; sourceTree = "<group>"; };
+		68EF75062069DDC600265BDE /* XSChartVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSChartVController.m; sourceTree = "<group>"; };
 		68F6E72A1F1D9E3000202545 /* TextAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextAnimationVC.h; sourceTree = "<group>"; };
 		68F6E72B1F1D9E3000202545 /* TextAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextAnimationVC.m; sourceTree = "<group>"; };
 		68F6EBBC1F1C4CAF0076E1D0 /* scene1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scene1_1.png; sourceTree = "<group>"; };
@@ -436,7 +431,6 @@
 			isa = PBXGroup;
 			children = (
 				685ACAA81F0DDFD100C6BF2C /* BaseFile */,
-				685ACB011F0DE35E00C6BF2C /* Chart */,
 				685ACAFD1F0DE31900C6BF2C /* CALayerAnimation */,
 				685ACAB01F0DDFD100C6BF2C /* FirstVController.h */,
 				685ACAB11F0DDFD100C6BF2C /* FirstVController.m */,
@@ -512,11 +506,6 @@
 				68D523711F1CC064008A4F06 /* FormView.m */,
 				687BAEE11F1CFBD00001CF77 /* WaveWaterView.h */,
 				687BAEE21F1CFBD00001CF77 /* WaveWaterView.m */,
-				68BB78FD1F1E549E00434B70 /* KlineView.h */,
-				68BB78FE1F1E549E00434B70 /* KlineView.m */,
-				68BB79001F1E5AC100434B70 /* ZM_KLineModel.h */,
-				68BB79011F1E5AC100434B70 /* ZM_KLineModel.m */,
-				68D06B3F1F131F4A004ED2B5 /* mask.png */,
 				681C16211F3322F4008F9AA2 /* UIView+ZMAdd.h */,
 				681C16221F3322F4008F9AA2 /* UIView+ZMAdd.m */,
 				68F6EBC41F1C5D950076E1D0 /* GCD */,
@@ -591,6 +580,8 @@
 				685ACAEC1F0DE28C00C6BF2C /* CircleView.m */,
 				685ACAED1F0DE28C00C6BF2C /* GraphicsView.h */,
 				685ACAEE1F0DE28C00C6BF2C /* GraphicsView.m */,
+				685C37371F89192500AF30EA /* DrawRectView1.h */,
+				685C37381F89192500AF30EA /* DrawRectView1.m */,
 				683C1D651F173DB90050ABAB /* DrawRectView2.h */,
 				683C1D661F173DB90050ABAB /* DrawRectView2.m */,
 				68F6EBBE1F1C4EAD0076E1D0 /* DrawRect_imgBgView.h */,
@@ -619,17 +610,10 @@
 				68FD52F91F15F62400B3C153 /* CALayerAnimation_LibVC.m */,
 				68F6E72A1F1D9E3000202545 /* TextAnimationVC.h */,
 				68F6E72B1F1D9E3000202545 /* TextAnimationVC.m */,
+				68EF75052069DDC600265BDE /* XSChartVController.h */,
+				68EF75062069DDC600265BDE /* XSChartVController.m */,
 			);
 			path = CALayerAnimation;
-			sourceTree = "<group>";
-		};
-		685ACB011F0DE35E00C6BF2C /* Chart */ = {
-			isa = PBXGroup;
-			children = (
-				685ACB021F0DE35E00C6BF2C /* XSChartVController.h */,
-				685ACB031F0DE35E00C6BF2C /* XSChartVController.m */,
-			);
-			path = Chart;
 			sourceTree = "<group>";
 		};
 		68788E3B1F1465630022581E /* Model */ = {
@@ -830,7 +814,6 @@
 				68D06B421F131F4E004ED2B5 /* mask.png in Resources */,
 				685ACAE51F0DE24100C6BF2C /* News_Picture_Save@2x.png in Resources */,
 				68D06B4B1F132564004ED2B5 /* scene13.jpg in Resources */,
-				68D06B401F131F4A004ED2B5 /* mask.png in Resources */,
 				685ACB221F0DE4F100C6BF2C /* bg_avatar.png in Resources */,
 				6827CDFE1F0F36D9005B5EC8 /* Home.jpg in Resources */,
 				68FD53001F15FBE800B3C153 /* m1.jpg in Resources */,
@@ -915,12 +898,13 @@
 				68F6EBD61F1C5D950076E1D0 /* UIView+SetRect.m in Sources */,
 				6889735B1F556B0F00F430DB /* ZMPopupMenuView.m in Sources */,
 				685ACA761F0DDFB700C6BF2C /* AppDelegate.m in Sources */,
-				68BB78FF1F1E549E00434B70 /* KlineView.m in Sources */,
 				68788E441F14735D0022581E /* CALayer_CAEmitterLayer.m in Sources */,
 				685ACB4B1F0E0A8200C6BF2C /* DrawRect_VC.m in Sources */,
 				687BAEE31F1CFBD00001CF77 /* WaveWaterView.m in Sources */,
 				68FD52F11F15C71400B3C153 /* CALayer_BaseVC.m in Sources */,
+				68EF75072069DDC600265BDE /* XSChartVController.m in Sources */,
 				68F6EBE01F1C88DA0076E1D0 /* CircleProgressView.m in Sources */,
+				685C37391F89192500AF30EA /* DrawRectView1.m in Sources */,
 				68D5236F1F1CBFF6008A4F06 /* Form_VC.m in Sources */,
 				68F6EBD21F1C5D950076E1D0 /* GCDGroup.m in Sources */,
 				685ACB451F0E07EF00C6BF2C /* UIBezierPath_VC.m in Sources */,
@@ -928,7 +912,6 @@
 				68788E4D1F14B68E0022581E /* UIBezierPath_RectView.m in Sources */,
 				685ACA7F1F0DDFB700C6BF2C /* ZM_CALayerAnimation.xcdatamodeld in Sources */,
 				685ACB4E1F0E0AC300C6BF2C /* CABasicAnimation_VC.m in Sources */,
-				68BB79021F1E5AC100434B70 /* ZM_KLineModel.m in Sources */,
 				685ACAD01F0DE04600C6BF2C /* UIBezierPath+ZJText.m in Sources */,
 				685ACB541F0E107800C6BF2C /* UIBezierPath_AAView.m in Sources */,
 				68788E4A1F1479D00022581E /* CABasicAnimation_VC1.m in Sources */,
@@ -939,7 +922,6 @@
 				68F6EBD31F1C5D950076E1D0 /* GCDQueue.m in Sources */,
 				685ACABC1F0DDFD100C6BF2C /* FirstVController.m in Sources */,
 				685ACAC71F0DE01200C6BF2C /* UIView+ZMAdd.m in Sources */,
-				685ACB041F0DE35E00C6BF2C /* XSChartVController.m in Sources */,
 				685ACAF41F0DE28C00C6BF2C /* GraphicsView.m in Sources */,
 				68FD52F71F15F30E00B3C153 /* CAAnimation_VC.m in Sources */,
 				68F6EBD51F1C5D950076E1D0 /* GCDTimer.m in Sources */,

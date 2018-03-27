@@ -63,6 +63,7 @@ static CGFloat WWHH = 100;  // 的高度
     layer.strokeEnd     = 0.9f; // 弧线结束的角度值
     // 将layer添加进图层
     [showView.layer addSublayer:layer];
+
     //同上
     [self performSelector:@selector(mainThread:) withObject:layer afterDelay:1];
     

@@ -3,7 +3,7 @@
 //  ContractionCounter
 //
 //  Created by zhiwill on 15/2/17.
-//  Copyright (c) 2015年 机智的新手. All rights reserved.
+//  Copyright (c) 2015年 ZM手. All rights reserved.
 //
 
 #import "XSChart.h"
@@ -28,7 +28,7 @@ CGFloat radius=5.f;
     self=[super initWithFrame:frame];
     if (self) {
         self.backgroundColor=[UIColor whiteColor];
-        _linePath=[CAShapeLayer layer];
+        _linePath= [CAShapeLayer layer];
         _linePath.lineCap=  kCALineCapRound;
         _linePath.lineJoin= kCALineJoinBevel;
         _linePath.lineWidth=2;
@@ -88,6 +88,7 @@ CGFloat radius=5.f;
     
     
     for (int i=0; i<self.count; i++) {
+        
         CGFloat value=  [_dataSource chart:self valueAtIndex:i];
         CGPoint point=  [self pointWithValue:value index:i];
         UIBezierPath *drawPoint=    [UIBezierPath bezierPath];

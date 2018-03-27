@@ -40,6 +40,7 @@
     mylayer.cornerRadius=40;
     mylayer.masksToBounds=YES;
     //mylayer.opacity=0.2;     //1.5设置透明度
+    [self.view.layer addSublayer:mylayer];
 
     //2.阴影图层
     shadowLayer=[[CALayer alloc]init];
@@ -48,12 +49,19 @@
     shadowLayer.backgroundColor= OrangeColorAA.CGColor;
     shadowLayer.cornerRadius = 40;
     //shadowLayer.masksToBounds=YES; //会裁掉阴影
-    shadowLayer.shadowOffset = CGSizeMake(6, 6);
     shadowLayer.shadowColor  = [UIColor greenColor].CGColor;
-    shadowLayer.shadowOpacity= 0.5;
+    shadowLayer.shadowOpacity= 0.9;
+    shadowLayer.shadowRadius = 10;
+    shadowLayer.shadowOffset = CGSizeMake(0, 6);
     [self.view.layer addSublayer:shadowLayer];
 
-    [self.view.layer addSublayer:mylayer];
+    
+//    self.view2.layer.shadowOpacity = 0.8;
+//    let path = CGPathCreateMutable();
+//    //画一个圆形的阴影        
+//    CGPathAddArc(path, nil, 200, 200, 20, 0, CGFloat(M_PI*2), true);
+//    self.view2.layer.shadowPath = path;
+    
 
 }
 //例一：layer透明

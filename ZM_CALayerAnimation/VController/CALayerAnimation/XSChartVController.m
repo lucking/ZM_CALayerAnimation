@@ -27,7 +27,8 @@
     _data=@[@1,@2,@3,@4,@9,@6,@12];
     XSChart *chart=[[XSChart alloc]initWithFrame:CGRectMake(0, 70, SSWIDTH, 250)];
     chart.dataSource=self;
-    chart.delegate=self;
+    chart.delegate =self;
+    chart.backgroundColor = Gray_666666;
     [self.view addSubview:chart];
     
 }

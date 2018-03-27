@@ -180,6 +180,13 @@ yy9= 1900;
     CGContextDrawPath(ctx3, kCGPathFillStroke);  //绘制路径
     
 }
+- (void)extracted:(CGFloat)xx4 {
+    [self drawRectangleFrame:CGRectMake(xx4, yy2, 60.0f, 80.0f)
+                 strokeColor:Purple_Color
+                   fillColor:Green698B69
+                   lineWidth:2.0f];
+}
+
 // 画矩形
 - (void)drawRectangle {
     
@@ -208,10 +215,7 @@ yy9= 1900;
     CGContextStrokeRect(ctx2, CGRectMake(xx3, yy2, 60, 80));
     CGContextStrokePath(ctx2);
     //画矩形 实心+边框  DrawPath
-    [self drawRectangleFrame:CGRectMake(xx4, yy2, 60.0f, 80.0f)
-                 strokeColor:Purple_Color
-                   fillColor:Green698B69
-                   lineWidth:2.0f];
+    [self extracted:xx4];
 }
 
 /** 画矩形 （封装的方法）

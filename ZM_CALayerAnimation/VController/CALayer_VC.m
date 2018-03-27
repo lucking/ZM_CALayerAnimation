@@ -104,7 +104,6 @@ static CGFloat yy1= 20, yy2= 200, yy3= 240;
     shapeLayer.backgroundColor= Cyan_COLOR.CGColor;
     shapeLayer.path = path.CGPath;
     [_imgView.layer setMask:shapeLayer];
-
     
     //mask：蒙版
     UIImage *maskImage = [UIImage imageNamed:@"mask"];
