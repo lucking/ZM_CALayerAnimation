@@ -8,6 +8,6 @@
 
 #import "BBaseViewController.h"
 
-@interface CALayerAnimation_LibVC : BBaseViewController
+@interface LibsVC : BBaseViewController
 
 @end

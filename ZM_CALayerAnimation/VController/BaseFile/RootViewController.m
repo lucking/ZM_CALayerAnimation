@@ -21,11 +21,9 @@
 #import "CATransition_VC.h"
 #import "CAAnimation_VC.h"
 //#import "CherryViewController.h"
-#import "CALayerAnimation_LibVC.h"
+#import "LibsVC.h"
 #import "CATransform3D_VC.h"
 #import "CATransform3D_VC2.h"
-#import "Form_VC.h"
-#import "WaterWave_VC.h"
 #import "PopupMenuVC.h"
 
 @interface RootViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -73,9 +71,7 @@
                             @" CAAnimation_VC",
                             @" CATransform3D_VC",
                             @" CATransform3D_VC2",
-                            @" CALayerAnimation_LibVC",
-                            @" Form_VC",
-                            @" WaterWave_VC",
+                            @" LibVC",
                             @" PopupMenu_VC",
                             @" VC",
                             @" VC"
@@ -111,10 +107,10 @@
     }else if (indexPath.row == 9 ){  pushVC = [[CAAnimation_VC alloc]init];
     }else if (indexPath.row == 10 ){  pushVC = [[CATransform3D_VC alloc]init];
     }else if (indexPath.row == 11 ){  pushVC = [[CATransform3D_VC2 alloc]init];
-    }else if (indexPath.row == 12 ){  pushVC = [[CALayerAnimation_LibVC alloc]init];
-    }else if (indexPath.row == 13 ){  pushVC = [[Form_VC alloc]init];
-    }else if (indexPath.row == 14 ){  pushVC = [[WaterWave_VC alloc]init];
-    }else if (indexPath.row == 15 ){  pushVC = [[PopupMenuVC alloc]init];
+    }else if (indexPath.row == 12 ){  pushVC = [[LibsVC alloc]init];
+//    }else if (indexPath.row == 13 ){  pushVC = [[Form_VC alloc]init];
+//    }else if (indexPath.row == 14 ){  pushVC = [[WaterWave_VC alloc]init];
+    }else if (indexPath.row == 13 ){  pushVC = [[PopupMenuVC alloc]init];
     }
     pushVC.title = self.titleArray[indexPath.row];
     pushVC.tabBarController.hidesBottomBarWhenPushed = YES;

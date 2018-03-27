@@ -15,7 +15,7 @@
 -(NSInteger)numberForChart:(XSChart *)chart;
 -(NSInteger)chart:(XSChart *)chart valueAtIndex:(NSInteger)index;
 @optional
--(NSString *)titleForChart:(XSChart *)chart;    // 表的标题
+//-(NSString *)titleForChart:(XSChart *)chart;    // 表的标题
 -(NSString *)titleForXAtChart:(XSChart *)chart; // X轴标题
 -(NSString *)titleForYAtChart:(XSChart *)chart; // Y轴标题
 -(BOOL)showDataAtPointForChart:(XSChart *)chart;// 是否展示数据点
@@ -32,4 +32,9 @@
 @property(nonatomic,assign)id<XSChartDataSource> dataSource;
 @property(assign, nonatomic)id<XSChartDelegate> delegate;
 -(void)reload;
+
+@property(copy, nonatomic) NSString *title;
+@property(copy, nonatomic) NSString *xTitle;
+@property(copy, nonatomic) NSString *yTitle;
+
 @end

@@ -23,15 +23,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     _data=@[@1,@2,@3,@4,@9,@6,@12];
     XSChart *chart=[[XSChart alloc]initWithFrame:CGRectMake(0, 70, SSWIDTH, 250)];
     chart.dataSource=self;
     chart.delegate =self;
-    chart.backgroundColor = Gray_666666;
+    chart.backgroundColor = [Gray_666666 colorWithAlphaComponent:0.2];
     [self.view addSubview:chart];
     
+    chart.title  = @"XSChart Demo";
+    chart.yTitle = @"count";
+    chart.xTitle = @"Index";
+
 }
+
 -(NSInteger)numberForChart:(XSChart *)chart{
     return _data.count;
 }
@@ -44,9 +48,9 @@
 -(NSString *)chart:(XSChart *)chart titleForXLabelAtIndex:(NSInteger)index{
     return [NSString stringWithFormat:@"%ld",(long)index];
 }
--(NSString *)titleForChart:(XSChart *)chart{
-    return @"XSChart Demo";
-}
+//-(NSString *)titleForChart:(XSChart *)chart{
+//    return @"XSChart Demo";
+//}
 -(NSString *)titleForXAtChart:(XSChart *)chart{
     return @"Index";
 }
@@ -56,9 +60,6 @@
 -(void)chart:(XSChart *)view didClickPointAtIndex:(NSInteger)index{
     NSLog(@"click at index:%ld",(long)index);
 }
-
-
-
 
 
 @end

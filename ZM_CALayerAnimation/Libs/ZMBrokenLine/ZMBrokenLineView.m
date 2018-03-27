@@ -1,19 +1,16 @@
 //
-//  Chart.m
-//  ContractionCounter
+//  ZMBrokenLineView.m
+//  ZM_CALayerAnimation
 //
-//  Created by zhiwill on 15/2/17.
-//  Copyright (c) 2015年 ZM手. All rights reserved.
+//  Created by ZM on 2018/3/27.
+//  Copyright © 2018年 ZM. All rights reserved.
 //
 
-#import "XSChart.h"
-#import "UIView+ZMFrame.h"
-#import "BaseHeader.h"
+#import "ZMBrokenLineView.h"
+#import "ZMBrokenLineHeader.h"
+#import "UIView+ZMBrokenLine.h"
 
-CGFloat margin= 14.f;
-CGFloat radius= 5.f;
-
-@interface XSChart ()
+@interface ZMBrokenLineView ()
 @property(nonatomic, strong) UILabel *titleLabel;
 @property(nonatomic, strong) UILabel *xTitleLabel;
 @property(nonatomic, strong) UILabel *yTitleLabel;
@@ -24,7 +21,8 @@ CGFloat radius= 5.f;
 @property(nonatomic, assign) NSInteger count;
 @end
 
-@implementation XSChart
+
+@implementation ZMBrokenLineView
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
@@ -55,7 +53,7 @@ CGFloat radius= 5.f;
 -(CGFloat)avgHeight
 {
     CGFloat height= self.frame.size.height;
-    _avgHeight=(height-4*margin)/self.maxValue;
+    _avgHeight=(height-4*zmMargin)/self.maxValue;
     return _avgHeight;
 }
 -(void)drawRect:(CGRect)rect
@@ -94,21 +92,21 @@ CGFloat radius= 5.f;
         CGFloat value=  [_dataSource chart:self valueAtIndex:i];
         CGPoint point=  [self pointWithValue:value index:i];
         UIBezierPath *drawPoint=    [UIBezierPath bezierPath];
-        [drawPoint addArcWithCenter:point radius:radius startAngle:M_PI*0 endAngle:M_PI*2 clockwise:YES];
+        [drawPoint addArcWithCenter:point radius:zmradius startAngle:M_PI*0 endAngle:M_PI*2 clockwise:YES];
         CAShapeLayer *layer=    [[CAShapeLayer alloc]init];
         layer.path= drawPoint.CGPath;
         _linePath.strokeEnd=    1;
-       
+        
         [self.layer addSublayer:layer];
         if (_dataSource&&[_dataSource respondsToSelector:@selector(showDataAtPointForChart:)]&&[_dataSource showDataAtPointForChart:self]) {
             NSString *valueString= [NSString stringWithFormat:@"%ld",(long)value];
-            CGRect frame= [valueString boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:FFont(14.f)} context:nil];
+            CGRect frame= [valueString boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:zmFFont(14.f)} context:nil];
             //pointForValueString
-            CGPoint valuePoint= CGPointMake(point.x-frame.size.width/2, point.y+margin/3);
-            if (valuePoint.y+ frame.size.height>self.height-1.5*margin) {
-                valuePoint.y= point.y-1.5*margin;
+            CGPoint valuePoint= CGPointMake(point.x-frame.size.width/2, point.y+zmMargin/3);
+            if (valuePoint.y+ frame.size.height>self.height-1.5*zmMargin) {
+                valuePoint.y= point.y-1.5*zmMargin;
             }
-            [valueString drawAtPoint:valuePoint withAttributes:@{NSFontAttributeName: FFont(14.f)}];
+            [valueString drawAtPoint:valuePoint withAttributes:@{NSFontAttributeName: zmFFont(14.f)}];
         }
         if (_dataSource&&[_dataSource respondsToSelector:@selector(chart:titleForXLabelAtIndex:)]) {
             NSString *titleForXLabel=[_dataSource chart:self titleForXLabelAtIndex:i];
@@ -133,12 +131,12 @@ CGFloat radius= 5.f;
     NSDictionary *font=@{NSFontAttributeName: [UIFont systemFontOfSize:12.f]};
     
     NSString *origin=@"0";
-    [origin drawAtPoint:CGPointMake(0.9*margin, self.frame.size.height-2*margin) withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:11.f]}];
+    [origin drawAtPoint:CGPointMake(0.9*zmMargin, self.frame.size.height-2*zmMargin) withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:11.f]}];
     
     NSString *max=[NSString stringWithFormat:@"%ld",(long)self.maxValue];
     CGRect tmpFrame= [max boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:
                       NSStringDrawingUsesLineFragmentOrigin attributes:font context:nil];
-    [max drawAtPoint:CGPointMake(1.5*margin-tmpFrame.size.width-1, [self pointWithValue:_maxValue index:0].y-5) withAttributes:font];
+    [max drawAtPoint:CGPointMake(1.5*zmMargin-tmpFrame.size.width-1, [self pointWithValue:_maxValue index:0].y-5) withAttributes:font];
 }
 - (void)setTitle:(NSString *)title {
     _title= title;
@@ -148,31 +146,31 @@ CGFloat radius= 5.f;
 - (void)setXTitle:(NSString *)xTitle {
     _xTitle= xTitle;
     self.xTitleLabel.text= xTitle;
-
-//    CGRect frame= [xTitle boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12.f]} context:nil];
-//    [xTitle drawAtPoint:CGPointMake(self.frame.size.width-margin-frame.size.width,self.frame.size.height-2*margin-frame.size.height) withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12.f]}];
-//    self.titleLabel.frame = CGRectMake(0, 0, self.width, 20);
-//    self.xTitleLabel.frame = frame;
+    
+    //    CGRect frame= [xTitle boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12.f]} context:nil];
+    //    [xTitle drawAtPoint:CGPointMake(self.frame.size.width-zmMargin-frame.size.width,self.frame.size.height-2*zmMargin-frame.size.height) withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12.f]}];
+    //    self.titleLabel.frame = CGRectMake(0, 0, self.width, 20);
+    //    self.xTitleLabel.frame = frame;
 }
 
 - (void)setYTitle:(NSString *)yTitle {
     _yTitle= yTitle;
-//    [yTitle drawAtPoint:CGPointMake(1.5*margin,0.5*margin) withAttributes:nil];
+    //    [yTitle drawAtPoint:CGPointMake(1.5*zmMargin,0.5*zmMargin) withAttributes:nil];
 }
 
 -(void)setupTitle
 {
-//    if (_dataSource&&[_dataSource respondsToSelector:@selector(titleForChart:)]) {
-//        self.titleLabel.text= [_dataSource titleForChart:self];
-//    }
+    //    if (_dataSource&&[_dataSource respondsToSelector:@selector(titleForChart:)]) {
+    //        self.titleLabel.text= [_dataSource titleForChart:self];
+    //    }
     if (_dataSource&&[_dataSource respondsToSelector:@selector(titleForYAtChart:)]) {
         NSString *yTitle=[_dataSource titleForYAtChart:self];
-        [yTitle drawAtPoint:CGPointMake(1.5*margin,0.5*margin) withAttributes:nil];
+        [yTitle drawAtPoint:CGPointMake(1.5*zmMargin,0.5*zmMargin) withAttributes:nil];
     }
     if (_dataSource&&[_dataSource respondsToSelector:@selector(titleForXAtChart:)]) {
         NSString *xTitle=[_dataSource titleForXAtChart:self];
         CGRect frame=[xTitle boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12.f]} context:nil];
-        [xTitle drawAtPoint:CGPointMake(self.frame.size.width-margin-frame.size.width,self.frame.size.height-2*margin-frame.size.height) withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12.f]}];
+        [xTitle drawAtPoint:CGPointMake(self.frame.size.width-zmMargin-frame.size.width,self.frame.size.height-2*zmMargin-frame.size.height) withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12.f]}];
     }    
 }
 // 安装坐标系
@@ -180,36 +178,36 @@ CGFloat radius= 5.f;
 {
     //[[UIColor orangeColor] set]; （0, y）、（0,0）、（x,0）
     UIBezierPath *coordinate= [UIBezierPath bezierPath];
-    [coordinate moveToPoint:CGPointMake(1.5*margin, 1.5*margin)];
-    [coordinate addLineToPoint:CGPointMake(1.5*margin, self.height-1.5*margin)];
-    [coordinate addLineToPoint:CGPointMake(self.width-margin, self.height-1.5*margin)];
+    [coordinate moveToPoint:CGPointMake(1.5*zmMargin, 1.5*zmMargin)];
+    [coordinate addLineToPoint:CGPointMake(1.5*zmMargin, self.height-1.5*zmMargin)];
+    [coordinate addLineToPoint:CGPointMake(self.width-zmMargin, self.height-1.5*zmMargin)];
     [coordinate stroke];
     //Y箭头
     [[UIColor cyanColor] setStroke];
     UIBezierPath *arrowsForY=[UIBezierPath bezierPath];
-    [arrowsForY moveToPoint:CGPointMake(margin, margin*2)];
-    [arrowsForY addLineToPoint:CGPointMake(1.5*margin, 1.5*margin)];
-    [arrowsForY addLineToPoint:CGPointMake(margin*2, margin*2)];
+    [arrowsForY moveToPoint:CGPointMake(zmMargin, zmMargin*2)];
+    [arrowsForY addLineToPoint:CGPointMake(1.5*zmMargin, 1.5*zmMargin)];
+    [arrowsForY addLineToPoint:CGPointMake(zmMargin*2, zmMargin*2)];
     [arrowsForY stroke];
     //X箭头
     [[UIColor magentaColor] setStroke];
     UIBezierPath *arrowsForX = [UIBezierPath bezierPath];
-    [arrowsForX moveToPoint:CGPointMake(self.width-(margin*1.5), self.height-(margin*2))];
-    [arrowsForX addLineToPoint:CGPointMake(self.width-margin, self.height-1.5*margin)];
-    [arrowsForX addLineToPoint:CGPointMake(self.width-(margin*1.5), self.height-(margin*1))];
+    [arrowsForX moveToPoint:CGPointMake(self.width-(zmMargin*1.5), self.height-(zmMargin*2))];
+    [arrowsForX addLineToPoint:CGPointMake(self.width-zmMargin, self.height-1.5*zmMargin)];
+    [arrowsForX addLineToPoint:CGPointMake(self.width-(zmMargin*1.5), self.height-(zmMargin*1))];
     [arrowsForX stroke];
-
+    
 }
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch=[touches anyObject];
-//    NSLog(@"_count= %ld", _count);
+    //    NSLog(@"_count= %ld", _count);
     NSLog(@"self.count= %ld", self.count);
-
+    
     for (NSInteger i=0; i< self.count; i++) {
         NSInteger value=[_dataSource chart:self valueAtIndex:i];
         CGPoint point=[self pointWithValue:value index:i];
-        if (CGRectContainsPoint(CGRectMake(point.x-radius, point.y-radius, radius*2, radius*2), [touch locationInView:self])) {
+        if (CGRectContainsPoint(CGRectMake(point.x-zmradius, point.y-zmradius, zmradius*2, zmradius*2), [touch locationInView:self])) {
             if (_delegate&&[_delegate respondsToSelector:@selector(chart:didClickPointAtIndex:)]) {
                 [_delegate chart:self didClickPointAtIndex:i];
             }
@@ -248,7 +246,7 @@ CGFloat radius= 5.f;
 {
     CGFloat height= self.frame.size.height;
     CGFloat width=  self.frame.size.width;
-    return  CGPointMake(2.5*margin+(width-2*margin)/self.count*index, height-value*self.avgHeight-1.5*margin);
+    return  CGPointMake(2.5*zmMargin+(width-2*zmMargin)/self.count*index, height-value*self.avgHeight-1.5*zmMargin);
 }
 -(void)reload
 {

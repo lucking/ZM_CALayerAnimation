@@ -6,20 +6,23 @@
 //  Copyright © 2017年 ZM. All rights reserved.
 //
 
-#import "CALayerAnimation_LibVC.h"
+#import "LibsVC.h"
 #import "Common.h"
 #import "BaseHeader.h"
 #import "XSChartVController.h"
 #import "TextAnimationVC.h"
+#import "ZMBrokenLineVC.h"
+#import "WaterWave_VC.h"
+#import "Form_VC.h"
 
-@interface CALayerAnimation_LibVC ()<UITableViewDataSource,UITableViewDelegate>
+@interface LibsVC ()<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView* ttableView;
 }
 @property (nonatomic, retain) NSArray* titleArray;
 @end
 
-@implementation CALayerAnimation_LibVC
+@implementation LibsVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,9 +31,9 @@
     
     NSArray* titleArray = @[@" XSChartVC",
                             @" TextAnimationVC",
-                            @" EEViewC",
-                            @" FFViewC",
-                            @" GGViewC",
+                            @" ZMBrokenLineVC",
+                            @" WaterWave_VC",
+                            @" Form_VC",
                             @" HHViewC",];
     self.titleArray = titleArray;
     
@@ -52,7 +55,9 @@
     UIViewController *pushVC;
     if (indexPath.row == 0) {       pushVC = [[XSChartVController alloc]init];
     }else if (indexPath.row == 1 ){ pushVC = [[TextAnimationVC alloc]init];
-    }else if (indexPath.row == 2 ){ //pushVC = [[ZJTextVController alloc]init];
+    }else if (indexPath.row == 2 ){ pushVC = [[ZMBrokenLineVC alloc]init];
+    }else if (indexPath.row == 3 ){ pushVC = [[WaterWave_VC alloc]init];
+    }else if (indexPath.row == 4 ){ pushVC = [[Form_VC alloc]init];
     }
     pushVC.title = self.titleArray[indexPath.row];
     pushVC.tabBarController.hidesBottomBarWhenPushed = YES;

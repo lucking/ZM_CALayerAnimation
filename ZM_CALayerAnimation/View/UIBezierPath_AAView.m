@@ -249,7 +249,7 @@ static CGFloat WWHH = 100;  // 的高度
     aPath.lineCapStyle  = kCGLineCapRound; //线条拐角
     aPath.lineJoinStyle = kCGLineCapRound; //终点处理
     
-    [aPath moveToPoint:CGPointMake(120, 280)];
+    [aPath moveToPoint:CGPointMake(120, 380)];
     [aPath addCurveToPoint:CGPointMake(300, 350)
              controlPoint1:CGPointMake(210, 300)
              controlPoint2:CGPointMake(210, 400)];
@@ -261,17 +261,19 @@ static CGFloat WWHH = 100;  // 的高度
     lineLayer.path = aPath.CGPath;
     lineLayer.lineWidth = 1;
     lineLayer.strokeColor = _strokeColor.CGColor;
-    lineLayer.fillColor = _fillColor.CGColor;
+    lineLayer.fillColor   = _fillColor.CGColor;
     lineLayer.speed       = 0.6;    // 绘制的速度 （动画时间的百分比：0.0~1.0 * duration）
     lineLayer.lineWidth   = 2.0f;   // 线条宽度
     [self.layer addSublayer:lineLayer];
     // 给这个layer添加动画效果
     CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     pathAnimation.duration  = 1.0;
+    pathAnimation.timingFunction= [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     pathAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
     pathAnimation.toValue   = [NSNumber numberWithFloat:1.0f]; 
-    [lineLayer addAnimation:pathAnimation forKey:nil];
-
+    pathAnimation.autoreverses= NO;
+    [lineLayer addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
+    
 }
 
 //主线程
